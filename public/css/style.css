@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Oswald:wght@600&family=Pacifico&family=Righteous&display=swap');
+body,html{
+    overflow-x: hidden;
+    font-family: 'Oswald' !important;
+    scroll-behavior: smooth;
+}
+.banner{
+    background-image: url('../images/72.jpg');
+    background-size: cover;
+    background-position-y: -15rem;
+    font-weight: bold;
+    font-family: 'righteous';
+ }
+ #shadow{
+    position: absolute;
+    height: auto;
+    width: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.368);
+ }
+ .images{
+    width: 19rem;
+    height: 19rem;
+    transition: all 1s;
+
+    margin-left: 0.4rem;
+ }
+ .images:hover{
+     transform: scale(1.05);
+     transition: all 1s;
+ }
+ .second_col>h3{
+  text-transform: uppercase;
+  text-align: left;
+  border-left: 1rem solid #ea9e9e;
+  padding-left: 0.5rem;
+ }
+ .second_col>p{
+     text-align: left;
+     font-size: 1.3rem;
+     text-transform: capitalize;
+ }
+
+ .left-navigation{
+     background-color: #163746;
+ }
+ a.nav-link{
+     color: white;
+ }
+ .nav-menu>a{
+    font-size: 1.5rem;
+
+ }
+ .brand-text{
+     text-transform: uppercase;
+     color: #ea9e9e;
+     font-family: 'Lato';
+     font-size: 2.3rem;
+ }
+ a.nav-link:hover{
+    color: #ea9e9e;
+}
+.hollow-button{
+    transition: all 1.5s;
+    font-size: 1.3rem;
+    background-color: #ea9e9e33;
+}
+
+.hollow-button:hover{
+    background-color: #ea9e9e !important;
+    transition: all 1.5s;
+}
+.form-wrapper{
+    
+    font-family: 'righteous';
+
+}
+.send-btn{
+    background-color: #b36565;
+}
+.send-btn:hover{
+    background-color: #ae5a5a;
+}
+.section-title-group{
+    font-family: 'lato';
+}
