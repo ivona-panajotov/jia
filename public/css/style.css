@@ -84,3 +84,10 @@ body,html{
 .section-title-group{
     font-family: 'lato';
 }
+.grid-image{
+    left: auto;
+    top: auto;
+}
+.teret{
+    text-align: center;
+}
