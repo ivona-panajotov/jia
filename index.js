@@ -23,29 +23,25 @@ app.get('/',(req,res)=>{
 ///////////      sifra za gmail: testic123             ///////////
 
 */
-  const myOAuth2Client = new OAuth2(
-    process.env.CLIENT_ID,
-    process.env.CLIENT_SECRET,
-    )
-    myOAuth2Client.setCredentials({
-      refresh_token:process.env.REFRESH_TOKEN
-      })
-      const myAccessToken = myOAuth2Client.getAccessToken()
+  // const myOAuth2Client = new OAuth2(
+  //   process.env.CLIENT_ID,
+  //   process.env.CLIENT_SECRET,
+  //   )
+  //   myOAuth2Client.setCredentials({
+  //     refresh_token:process.env.REFRESH_TOKEN
+  //     })
+  //     const myAccessToken = myOAuth2Client.getAccessToken()
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-       type: "OAuth2",
-       user: process.env.GMAIL_USER, 
-       clientId: process.env.CLIENT_ID,
-       clientSecret: process.env.CLIENT_SECRET,
-       refreshToken: process.env.REFRESH_TOKEN,
-       accessToken: myAccessToken
+      user:'testingjianode@gmail.com',
+      pass:'awslonsopgsqueji'
   }});
 
 app.post("/", async (req, res, next) => {
-  res.redirect('/')
-  let data = {};
+  // res.redirect('/')
+  // let data = {};
   console.log(req.body)
     const mail = {
       from: req.body.email,
@@ -58,7 +54,7 @@ app.post("/", async (req, res, next) => {
         console.log(err);
         res.status(500).send("Something went wrong.");
       } else {
-        res.status(200).send("Email successfully sent to recipient!");
+        res.status(204).send();
       }
     });
 });

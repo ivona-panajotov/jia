@@ -116,9 +116,9 @@
                            required data-name="email" placeholder="Email" maxlength="256"  class="form-field w-input"/></div>
                      </div>
                      <textarea id="field-4" name="subject" placeholder="Poruka" maxlength="5000" data-name="subject" class="form-field text-area w-input"></textarea>
-                     <input type="submit" value="Pošalji" data-wait="Please wait..." class="send-btn button full-width w-button"/>
+                     <input type="submit" value="Pošalji" onclick="sendmsg()" data-wait="Please wait..." class="send-btn button full-width w-button"/>
                   </form>
-                  <div class="success-message w-form-done">
+                  <div class="success-message w-form-done poslato">
                      <p class="paragraph-form">Poslato</p>
                   </div>
                   <div class="success-message w-form-fail">
@@ -149,8 +149,26 @@ $('a.nav-link').mouseenter(function(){
         'borderColor':'white'
     },500);
 });
-   const btn=document.getElementsByClassName('send-btn')[0]
-   btn.preventDefault();
-   
+   let btn=document.getElementsByClassName('send-btn')[0]
+   function sendmsg(){
+      // alert('sent')
+      $('.poslato').css({'display':'inline'})
+      document.getElementById('email-form').reset()
+   }
+//    $('#email-form').submit(function (e) {
+//         e.preventDefault();
+//         var fd = new FormData($(this));
+//         console.log(fd)
+//         $.ajax({
+//             url: '/',
+//             data: fd,
+//             processData: false,
+//             contentType: false,
+//             type: 'POST',
+//             success: function(data){
+//               alert('Mail sent')
+//             }
+//         });
+// });
       </script>
       </html>

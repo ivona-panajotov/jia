@@ -91,3 +91,10 @@ body,html{
 .teret{
     text-align: center;
 }
+.poslato{
+    margin-top: 2rem !important;
+}
+.poslato>p{
+    font-family: 'lato';
+
+}
